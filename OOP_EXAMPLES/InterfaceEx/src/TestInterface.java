@@ -26,7 +26,7 @@ public class TestInterface {
 		 figureArray[2] = cylinder; //pointer to the cylinder subclass object
 		 
 		 for (int i = 0; i < figureArray.length ; i++){
-			 
+			 figureArray[i].default_method();
 			 outputString += "\n\n" + figureArray[i].getName() + ": " + figureArray[i].toString() +
 					         "\nArea= " + twoDigits.format(figureArray[i].getArea()) + 
 					         "\nVolume= " + twoDigits.format(figureArray[i].getVolume());
@@ -38,6 +38,8 @@ public class TestInterface {
 		                      // do so on the class (see below)
  		 int b = Constants.TWO; //importing interface
 		 
+ 		 Figure.helper_method();
+ 		 
 		 JOptionPane.showMessageDialog(null, outputString);
 		 System.exit(0);
 
